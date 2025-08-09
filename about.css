@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  background-color: var(--secondary-color);
+}
+
+:root {
+  --secondary-color: #f9faff;
+  --primary-color: #fdc435;
+  --heading-color: #25282b;
+  --text-color: #828282;
+}
+
+nav.header-menu{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 120px;
+}
+.logo-text p.header-logo-text{
+    font-size: 18px;
+    font-family: 'Nunito';
+    color: var(--heading-color);
+    text-shadow: 0px 2px 2px #000000;
+    font-weight: 900;
+}
+ul.header-item{
+    display: flex;
+    gap: 48px;
+    list-style: none;
+    font-family: 'Montserrat';
+}
+ul.header-item a{
+    text-decoration: none;
+    color: var(--heading-color);
+    position: relative;
+    display: block;
+    
+}
+ul.header-item a::before{
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 2px ;
+    background-color: var(--heading-color);
+    transform: scale(0);
+    transition: all .6s ease-in-out;
+}
+
+ul.header-item a:hover::before{
+    transform: scale(1);
+}
+.about-section{
+    display: flex;
+    padding: 120px;
+    justify-content: center;
+    align-items: center;
+}
+.about-hero-image{
+    height: 400px;
+    width: 400px;
+    -webkit-mask-image: url('Yellow\ Ellipse.png');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+
+    mask-image: url('Yellow\ Ellipse.png');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: #fdc435;
+}
+.about-hero-image img{
+    width: 400px;
+    height: 400px;
+    position: relative;
+    top: 30px;
+    left: 5px;
+}
+.about-text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.about-text h1{
+    font-size: 50px;
+    font-family: 'Playfair Display';
+    color: var(--heading-color);
+}
+
+.about-text p.hero-para{
+    width: 65%;
+    font-size: 17px;
+    font-family: 'Nunito';
+    color: var(--text-color);
+}
+.about-text a.hero-btn{
+    text-decoration: none;
+    padding: 4px 12px;
+    color: var(--heading-color);
+    font-size: 18px;
+    background-color: #fdc435;
+    border-radius: 5px;
+    align-self: flex-start;
+    font-family: 'Roboto';
+}
+.about-text a.hero-btn:hover{
+    background-color: #ce9b1c;
+}
